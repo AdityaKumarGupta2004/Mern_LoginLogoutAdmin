@@ -1,0 +1,518 @@
+/* ==========================
+   Global Reset & Variables
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Urbanist, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+}
+
+:root {
+  --bg-color: #f4f3ff;
+  --btn-color: #646cff;
+  --dark-color: #242424;
+  --helper-color: #99b9ff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* ==========================
+      Typography & Links
+========================== */
+h1 {
+  font-size: 5.4rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+p,
+li,
+label,
+input,
+textarea {
+  font-size: 1.8rem;
+  line-height: 1.56;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.06rem;
+}
+
+a {
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  color: var(--btn-color);
+  text-decoration: none;
+}
+
+a:hover,
+a.active {
+  color: #535bf2;
+}
+
+li {
+  list-style: none;
+}
+
+/* ==========================
+      Layout & Grid
+========================== */
+.container {
+  max-width: 140rem;
+  padding: 4rem 2.4rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 6.4rem;
+}
+
+.grid-two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three-cols {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2rem;
+}
+
+.grid-four-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ==========================
+      Buttons
+========================== */
+button {
+  text-transform: capitalize;
+  padding: 1rem 2.2rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  background-color: var(--btn-color);
+  border-radius: 0.8rem;
+  border: 0.1rem solid transparent;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  transition: border-color 0.3s;
+}
+
+button:hover {
+  box-shadow: inset 0 0 0 0.2rem var(--bg-color);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 0.2rem var(--btn-color);
+  margin-left: 3.2rem;
+}
+
+/* ==========================
+      Hero Section
+========================== */
+.section-hero {
+  display: grid;
+  align-items: center;
+}
+
+.hero-content p {
+  margin: 2.4rem 0 4.8rem;
+}
+
+.hero-content p:first-child {
+  margin: 0 0 1.2rem;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 70%;
+  height: auto;
+}
+.admin-users-section {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.admin-users-section h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.admin-users table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-users th, 
+.admin-users td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-users th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.admin-users tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.admin-users td {
+  color: #333;
+}
+
+.admin-users td button {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.admin-users .update-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.admin-users .update-btn:hover {
+  background-color: #218838;
+}
+
+.admin-users .delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.admin-users .delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* ==========================
+      Analytics Section
+========================== */
+.section-analytics {
+  margin: 9.6rem 0;
+}
+
+.section-analytics .container {
+  background-color: var(--bg-color);
+  border-radius: 1rem;
+}
+
+.section-analytics .grid {
+  color: var(--dark-color);
+  text-align: center;
+}
+
+.section-analytics .grid .div1 {
+  border-right: 0.2rem solid var(--dark-color);
+}
+
+.section-analytics .grid .div1:last-child {
+  border: none;
+}
+
+.section-analytics .grid h2 {
+  font-size: 4.8rem;
+}
+
+.section-analytics .grid p {
+  text-transform: capitalize;
+}
+
+/* ==========================
+      Contact Section
+========================== */
+.section-contact .contact-content h1 {
+  margin-bottom: 3.2rem;
+}
+
+.section-contact .container {
+  padding-top: 3.2rem;
+}
+
+.contact-img {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.contact-img img {
+  width: 80%;
+  height: auto;
+}
+
+.section-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.section-form label {
+  display: block;
+  margin-bottom: 1.2rem;
+  text-transform: capitalize;
+}
+
+.section-form input,
+.section-form textarea {
+  width: 80%;
+  padding: 0.4rem 0.6rem;
+}
+
+/* ==========================
+      Error Page
+========================== */
+#error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#error-page .content {
+  max-width: 70rem;
+  text-align: center;
+}
+
+.content h2.header {
+  font-size: 18vw;
+  line-height: 1em;
+  animation: animate 10s ease-in-out infinite;
+  background: linear-gradient(
+    -60deg,
+    #71b7e6,
+    var(--btn-color),
+    #b98acc,
+    #ee8176,
+    #b98acc,
+    var(--btn-color),
+    #9b59b6
+  );
+  background-size: 500%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+}
+
+@keyframes animate {
+  0% { background-position: 0 0; }
+  25% { background-position: 100% 0; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* ==========================
+      Registration Section
+========================== */
+.section-registration {
+  padding: 0 3.2rem;
+}
+
+.registration-form label {
+  display: block;
+  margin: 2.4rem 0 0.8rem;
+  text-transform: capitalize;
+}
+
+.registration-form input {
+  width: 80%;
+  padding: 0.6rem;
+}
+
+.registration-form button {
+  margin-top: 3.2rem;
+}
+
+/* ==========================
+      Services Section
+========================== */
+.section-services .card {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  border: 0.2rem solid var(--helper-color);
+}
+
+.section-services .card-img {
+  text-align: center;
+}
+
+.section-services .card-img img {
+  width: 70%;
+  height: auto;
+  filter: drop-shadow(0 0 2rem 2rem #fff);
+}
+
+.section-services .card-details {
+  padding: 2.4rem;
+}
+
+.section-services .card-details .grid p {
+  font-size: 1.4rem;
+}
+
+.section-services .card-details h2 {
+  font-size: 3.2rem;
+  margin: 1.2rem 0 2.4rem;
+}
+
+/* ==========================
+      Responsive Design
+========================== */
+@media (max-width: 998px) {
+  .grid-two-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 798px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .section-registration .registration-form input {
+    width: 100%;
+  }
+}
+/* ==========================
+      Services Section
+========================== */
+
+.section-services {
+  padding: 6rem 0;
+  background-color: var(--bg-color);
+}
+
+.section-services .container {
+  text-align: center;
+}
+
+.section-services .main-heading {
+  font-size: 4.8rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  color: var(--dark-color);
+}
+
+.section-services .grid-three-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3.2rem;
+  padding: 0 2rem;
+}
+
+/* ====== Card Styles ====== */
+.section-services .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2.4rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.section-services .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== Card Image ====== */
+.section-services .card-img {
+  width: 100%;
+  text-align: center;
+}
+
+.section-services .card-img img {
+  width: 60%;
+  height: auto;
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+/* ====== Card Details ====== */
+.section-services .card-details {
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.section-services .card-details h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--dark-color);
+}
+
+.section-services .card-details p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* ====== Provider & Price Grid ====== */
+.section-services .card-details .grid {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--btn-color);
+  margin-bottom: 1.2rem;
+}
+
+/* ==========================
+      Responsive Design
+========================== */
+@media (max-width: 1024px) {
+  .section-services .grid-three-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-services .grid-three-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .section-services .card {
+    padding: 2rem;
+  }
+
+  .section-services .card-details h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-services .main-heading {
+    font-size: 3.6rem;
+  }
+}
